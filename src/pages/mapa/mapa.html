@@ -1,0 +1,60 @@
+<!--
+  Generated template for the MapaPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    
+    <ion-navbar>
+        <button ion-button icon-only menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Mapa</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+	<div id="map" data-tap-disabled="true">
+        <div id="gmap" data-tap-disabled="true" >                
+        </div>
+        <div id="olmap" data-tap-disabled="true" >                
+        </div>
+    </div>
+
+
+    <button id="boton_centro" class="button button-float" (click)="mostrarMenu()">        
+        <div [innerHTML]="inject_c" style="font-size: 40px;"></div>
+        <ion-icon name="{{centroIcono}}"></ion-icon>
+    </button>
+
+    <!--<button ng-show="mostrar2" id="boton_1" class="button button-float" ng-click="mostrarExp()">
+        <i class="icon ion-ribbon-b"></i>        
+    </button-->
+
+    <button [hidden]="!mostrar2" id="boton_2" class="{{class_btn_2}} rojo button button-float" (click)="buscar()" >
+        <ion-icon name="search"></ion-icon>
+    </button>
+
+    <button  [hidden]="!mostrar" id="boton_3" class="{{class_btn_3}} button button-float" (click)="mostrarFinder()">    
+        <div [innerHTML]="inject_3" style="font-size: 38px;"></div>
+        <ion-icon name="{{icono_3}}"></ion-icon>
+    </button>
+
+    <button  [hidden]="!mostrar" id="boton_4" class="{{class_btn_3}} button button-float " (click)="clickBoton_4()">
+        <ion-icon name="{{icono_4}}"></ion-icon>
+    </button>
+
+    <button  [hidden]="!mostrar" id="boton_5" class="{{class_btn_3}} button button-float " (click)="cambiarMapa()">        
+        <div [innerHTML]="inject_5" style="font-size: 38px;"></div>
+        <ion-icon name="{{icono_5}}"></ion-icon>
+    </button>
+
+    <div class="menu_abajo">
+
+    </div>
+
+
+</ion-content>

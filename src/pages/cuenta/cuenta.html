@@ -1,0 +1,57 @@
+<!--
+  Generated template for the CuentaPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Cuenta</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+
+ <form >
+    <ion-list>
+      	<ion-item>
+        	<ion-label color="primary" stacked>N° Documento</ion-label>
+            <ion-input type="text" id="doc" name="doc" [(ngModel)]="crear.doc"></ion-input>
+      </ion-item>
+
+      <ion-item>
+            <ion-label color="primary" stacked>Nombre</ion-label>
+                <ion-input type="text" id="nombre" name="nombre" [(ngModel)]="crear.nombre"></ion-input>
+      </ion-item>
+
+      <ion-item>
+            <ion-label color="primary" stacked>Email</ion-label>
+            <ion-input type="text" id="email" name="email" [(ngModel)]="crear.email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+            <ion-label color="primary" stacked>Contraseña</ion-label>
+                <ion-input type="password" name="pass1" id="password1" [(ngModel)]="crear.pass1" ></ion-input>
+      </ion-item>
+
+      <ion-item>
+
+           <ion-label color="primary" stacked>Repita Contraseña</ion-label>
+                <ion-input type="password" name="pass2" id="password2" [(ngModel)]="crear.pass2"></ion-input>
+      </ion-item>
+  </ion-list>
+
+  <button ion-button block type="button" (click)="crearCuenta();">Crear cuenta</button>
+     
+            <div *ngIf="cargar" style="text-align: center">
+                <ion-spinner icon="lines"></ion-spinner>
+            </div>
+
+    </form>
+
+
+</ion-content>

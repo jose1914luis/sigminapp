@@ -1,0 +1,47 @@
+<!--
+  Generated template for the PuntoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Ubicar Coordenadas</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+	<ion-item>
+		<ion-label>Coordenadas</ion-label>
+        <ion-select  name="selectZone" [(ngModel)]="selectZone" >
+            <ion-option value="WGS84">WGS84</ion-option>
+            <ion-option value="BOGOTA">Colombia Bogota Zone</ion-option>
+            <ion-option value="ESTE-CENTRAL">Colombia E Central Zone</ion-option>
+            <ion-option value="ESTE-ESTE">Colombia East Zone</ion-option>
+            <ion-option value="OESTE">Colombia West Zone</ion-option>
+        </ion-select>
+    </ion-item>
+
+    <ion-item>
+    	<ion-label color="primary" stacked>Este/Longitud</ion-label>        
+        <ion-input type="text" name="coorX" id="coorX" [(ngModel)]="coorX"></ion-input>
+    </ion-item>
+   <ion-item>
+        <ion-label color="primary" stacked>Norte/Latitud</ion-label>
+        <ion-input type="text" name="coorY" id="coorY" [(ngModel)]="coorY"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label color="primary" stacked>Radio</ion-label>
+        <ion-input type="number" name="radio" id="radio" [(ngModel)]="radio"></ion-input>
+    </ion-item>
+    
+    <button ion-button block (click)="ubicarCoor(coorX, coorY, radio, selectZone)">
+        Ubicar Coordenadas
+    </button>
+
+
+</ion-content>

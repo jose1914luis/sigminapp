@@ -1,0 +1,7 @@
+/*****************************KEY Codes***************************/
+sudo ionic cordova build --release android
+sudo keytool -genkey -v -keystore key_app_sigmin.keystore -alias sigmin -keyalg RSA -keysize 2048 -validity 10000
+password:1035421260
+sudo jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore key_app_sigmin.keystore platforms/android/build/outputs/apk/android-release-unsigned.apk sigmin
+cd platforms/android/build/outputs/apk/
+sudo zipalign -v 4 android-release-unsigned.apk sigmin.apk
